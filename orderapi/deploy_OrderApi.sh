@@ -40,7 +40,11 @@ then
     echo "# Initializing new Amplify environment: ${ENV} (amplify init)"
     amplify init --amplify ${AMPLIFY} --providers ${PROVIDERS} --codegen ${CODEGEN} --yes;
     echo "# Environment ${ENV} details:"
-    amplify env get --name ${ENV}
+    
+    echo "Testing"
+    amplify env get --name master 
+    #${ENV}
+    echo "Done testing"
 else
     echo "ORDERAPIINFO="${ORDERAPIINFO}
     echo "# Importing Amplify environment: ${ENV} (amplify env import)"
